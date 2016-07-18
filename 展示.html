@@ -5,28 +5,26 @@
 </head>
 <body>
     <h1>TEXT</h1>
-    <!-- ÎªECharts×¼±¸Ò»¸ö¾ß±¸´óĞ¡£¨¿í¸ß£©µÄDom -->
+    <!-- ä¸ºEChartså‡†å¤‡ä¸€ä¸ªå…·å¤‡å¤§å°ï¼ˆå®½é«˜ï¼‰çš„Dom -->
     <div id="main" style="height:400px"></div>
-    <!-- EChartsµ¥ÎÄ¼şÒıÈë -->
+    <!-- EChartså•æ–‡ä»¶å¼•å…¥ -->
     <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
     <script type="text/javascript">
-        // Â·¾¶ÅäÖÃ
+        // è·¯å¾„é…ç½®
         require.config({
             paths: {
                 echarts: 'http://echarts.baidu.com/build/dist'
             }
         });
-
-        // Ê¹ÓÃ
+        // ä½¿ç”¨
         require(
             [
                 'echarts',
-                'echarts/chart/bar' // Ê¹ÓÃÖù×´Í¼¾Í¼ÓÔØbarÄ£¿é£¬°´Ğè¼ÓÔØ
+                'echarts/chart/bar' // ä½¿ç”¨æŸ±çŠ¶å›¾å°±åŠ è½½baræ¨¡å—ï¼ŒæŒ‰éœ€åŠ è½½
             ],
             function (ec) {
-                // »ùÓÚ×¼±¸ºÃµÄdom£¬³õÊ¼»¯echartsÍ¼±í
-                var myChart = ec.init(document.getElementById('main')); 
-
+                // åŸºäºå‡†å¤‡å¥½çš„domï¼Œåˆå§‹åŒ–echartså›¾è¡¨
+                var myChart = ec.init(document.getElementById('main'));
                 var option = {
                     tooltip: {
                         show: true
@@ -53,10 +51,10 @@
                         }
                     ]
                 };
-
-                // Îªecharts¶ÔÏó¼ÓÔØÊı¾İ 
-                myChart.setOption(option); 
+                // ä¸ºechartså¯¹è±¡åŠ è½½æ•°æ®
+                myChart.setOption(option);
             }
         );
     </script>
 </body>
+</html>
