@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>门禁数据统计分析</title>
+<script> 
+function setTab(name,cursel,n){ 
+for(i=1;i<=n;i++){ 
+var menu=document.getElementById(name+i); 
+var con=document.getElementById("con_"+name+"_"+i); 
+menu.className=i==cursel?"hover":""; 
+con.style.display=i==cursel?"block":"none"; 
+} 
+} 
+//--> 
+</script>
+
+<script src="echarts.js"></script>
+<style type="text/css">
+    .header{
+       height: 120px;
+       width:100%;
+       background-color: rgb(246,250,255);
+       padding-top: 0px;
+    }
+    .headerdata{
+       width:10%;
+       padding-left:10px;
+       float:left;
+       font-size: 20px;
+       margin:10px;
+       padding-top: 20px;
+    }
+    .leftchart{
+       height: 100%;
+       width:80%;
+       float:left;
+       padding-left:0px;
+    }
+    .righttable{
+       height: 100%;
+       width:20%; 
+       float:left;
+    }
+    .neibody
+    {
+      height: 800px;
+      width:100%;
+      padding-top:20px;
+    }
+    .hovertable{
+        font-size: 20px;
+        padding-left:20px;
+        padding-right:20px;
+        width:100%;
+    }
+    table.hovertable tr {
+	   background-color:#ffffff;
+    }
+    table.hovertable td {
+		border-width: 0px;
+		padding: 8px;
+		border-style: solid;
+		border-color: #a9c6c9;
+		font-family: verdana,arial,sans-serif;
+    }
+
+    li {list-style-type:none;font-size: 20px;float:left;padding-left:10px;margin:10px;cursor: pointer;}
+</style>
+<style type="text/css">
+#Tab1{ 
+width:95%; 
+height:100%;
+margin:0px; 
+padding:0px; 
+margin:0 auto;} 
+/*菜单class*/ 
+.Menubox { 
+width:100%; 
+height:28px; 
+line-height:28px; 
+} 
+.Menubox ul{ 
+margin:0px; 
+padding:0px; 
+} 
+.Menubox li{ 
+float:left; 
+display:block; 
+cursor:pointer; 
+width:114px; 
+text-align:center; 
+color:#949694; 
+font-weight:bold; 
+} 
+.Menubox li.hover{ 
+padding:0px; 
+background:#fff; 
+width:116px; 
+border-left:1px solid #A8C29F; 
+border-top:1px solid #A8C29F; 
+border-right:1px solid #A8C29F; 
+background:url(http://www.jb51.net/upload/small/200792994426548.gif); 
+color:rgb(115,177,244); 
+font-weight:bold; 
+height:27px; 
+line-height:27px; 
+} 
+.Contentbox{ 
+clear:both; 
+margin-top:0px; 
+<!--border:1px solid #A8C29F; -->
+border-top:none; 
+height:90%; 
+width:100%;
+text-align:center; 
+padding-top:8px; 
+} 
+.chart{
+  height:700px;
+  padding-left: 10px;
+  padding-top:30px;
+}
+--> 
+</style> 
+</head>
+<body style="margin:0px;">
+     
+     <div class="neibody">
+       <div class="leftchart">
+          <div id="Tab1"> 
+			<div class="Menubox"> 
+			<ul> 
+			<li id="one1" onClick="setTab('one',1,5)" class="hover">分时平均</li> 
+			<li id="one2" onClick="setTab('one',2,5)" >工作日平均</li> 
+			<li id="one3" onClick="setTab('one',3,5)">正常刷卡数</li> 
+			<li id="one4" onClick="setTab('one',4,5)">本周数据</li> 
+			<li id="one5" onClick="setTab('one',5,5)">本月数据</li>
+			</ul> 
+			</div> 
+			<div class="Contentbox"> 
+			<div id="con_one_1" class="chart" >图1</div> 
+			<div id="con_one_2" class="chart" >图2</div> 
+			<div id="con_one_3" class="chart" >图3</div> 
+			<div id="con_one_4" class="chart" >图4</div> 
+			<div id="con_one_5" class="chart" >图5</div> 
+			</div> 
+          </div>
+       </div>
+       
+     </div>
+</body>
+<script type="text/javascript" src=zhutu1.js></script> 
+</html>
