@@ -1,7 +1,9 @@
 学习笔记
 =============
 
-[git基础命令](git.md)
+[git基础命令](docs/git.md)
+
+[bower](docs/bower.md)
 
 ### Run the project:
 
